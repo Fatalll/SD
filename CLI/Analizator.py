@@ -6,9 +6,11 @@ from wc import *
 from echo import *
 from cat import *
 from grep import *
+from cd import *
+from ls import *
 
 variables = {}
-commands = {'pwd': pwd, 'exit': exit, 'wc': wc, 'echo': echo, 'cat': cat, 'grep': grep}
+commands = {'pwd': pwd, 'exit': exit, 'wc': wc, 'echo': echo, 'cat': cat, 'grep': grep, 'cd': cd, 'ls': ls}
 
 
 class Tree:

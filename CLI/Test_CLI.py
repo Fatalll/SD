@@ -84,6 +84,15 @@ class CLITest(unittest.TestCase):
         """tests grep command for key -A"""
         self.assertEqual(for_test("grep -A 1 abc test.txt\n"), "abc\nHelloWorld!")
 
+    def test_cd(self):
+        """tests cd command"""
+        self.assertEqual(for_test("cd qe\n"), None)
+        self.assertEqual(for_test("cd ..\n"), None)
+
+    def test_ls(self):
+        """tests cd command"""
+        self.assertEqual(for_test("ls qe\n"), ['test.txt'])
+
 
 if __name__ == '__main__':
     unittest.main()
