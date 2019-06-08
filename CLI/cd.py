@@ -10,6 +10,7 @@ def cd(*args):
         print("cd takes 1 or 0 arguments")
     else:
         try:
-            return os.chdir(args[1][0] if len(args) else os.getcwd())
+            os.chdir(args[1][0] if len(args) else os.getcwd())
+            return os.getcwd()
         except Exception as e:
             return str(e)

@@ -10,6 +10,6 @@ def ls(*args):
         print("ls takes 1 or 0 arguments")
     else:
         try:
-            return os.listdir(args[1][0] if len(args) else os.getcwd())
+            return '\n'.join(os.listdir(args[1][0] if len(args) else os.getcwd()))
         except Exception as e:
             return str(e)
